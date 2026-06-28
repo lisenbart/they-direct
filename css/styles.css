@@ -1073,6 +1073,77 @@ h2 {
   .site-footer {
     grid-template-columns: 1fr;
   }
+
+  .section--collapsible {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .section--collapsible + .section--collapsible {
+    margin-top: 8px;
+  }
+
+  .section--collapsible + .contact-section {
+    margin-top: clamp(14px, 2vw, 22px);
+  }
+
+  .section--collapsible .section-toggle {
+    display: block;
+    cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(35, 242, 255, 0.18);
+  }
+
+  .section--collapsible .section-toggle.section-header {
+    display: block;
+    gap: 0;
+    padding: 0;
+    margin-bottom: 0;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .section--collapsible .section-toggle__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 18px;
+    border: 1px solid var(--line-bright);
+    border-radius: var(--radius);
+    background: var(--paper-soft);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(20px);
+  }
+
+  .section--collapsible.is-expanded .section-toggle__bar {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .section--collapsible .section-toggle__content {
+    display: none;
+    gap: clamp(14px, 2.4vw, 22px);
+    padding: 0 18px 18px;
+    border: 1px solid var(--line-bright);
+    border-top: 0;
+    background: var(--paper-soft);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(20px);
+  }
+
+  .section--collapsible.is-expanded .section-toggle__content {
+    display: grid;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .section--collapsible:not(.is-expanded) .section-panel {
+    grid-template-rows: 0fr;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1220,80 +1291,9 @@ h2 {
   .contact-form .button {
     grid-column: auto;
   }
-
-  .section--collapsible {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .section--collapsible + .section--collapsible {
-    margin-top: 8px;
-  }
-
-  .section--collapsible + .contact-section {
-    margin-top: clamp(14px, 2vw, 22px);
-  }
-
-  .section--collapsible .section-toggle {
-    display: block;
-    cursor: pointer;
-    pointer-events: auto;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: rgba(35, 242, 255, 0.18);
-  }
-
-  .section--collapsible .section-toggle.section-header {
-    display: block;
-    gap: 0;
-    padding: 0;
-    margin-bottom: 0;
-    border: 0;
-    background: none;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  .section--collapsible .section-toggle__bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 15px 16px;
-    border: 1px solid var(--line-bright);
-    border-radius: var(--radius);
-    background: var(--paper-soft);
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(20px);
-  }
-
-  .section--collapsible.is-expanded .section-toggle__bar {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .section--collapsible .section-toggle__content {
-    display: none;
-    gap: clamp(14px, 2.4vw, 22px);
-    padding: 0 16px 16px;
-    border: 1px solid var(--line-bright);
-    border-top: 0;
-    background: var(--paper-soft);
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(20px);
-  }
-
-  .section--collapsible.is-expanded .section-toggle__content {
-    display: grid;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .section--collapsible:not(.is-expanded) .section-panel {
-    grid-template-rows: 0fr;
-  }
 }
 
-@media (min-width: 741px) {
+@media (min-width: 981px) {
   .section--collapsible .section-toggle {
     pointer-events: none;
     cursor: default;

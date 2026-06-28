@@ -90,7 +90,7 @@ if (!reduceMotion.matches) {
   );
 }
 
-const mobileSectionsMq = window.matchMedia("(max-width: 740px)");
+const mobileSectionsMq = window.matchMedia("(max-width: 980px)");
 
 initShowreelVideoFit();
 initShowreelVimeo();
