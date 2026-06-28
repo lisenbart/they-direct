@@ -50,7 +50,9 @@ body::after {
 }
 
 body::before {
-  background: linear-gradient(180deg, rgba(190, 249, 255, 0.28) 0%, rgba(244, 251, 253, 0.2) 42%, rgba(255, 255, 255, 0.18) 100%);
+  background:
+    linear-gradient(180deg, rgba(190, 249, 255, 0.22) 0%, rgba(244, 251, 253, 0.14) 42%, rgba(255, 255, 255, 0.12) 100%),
+    url("../assets/pics/hero_01.png") center center / cover no-repeat;
   transform: translate3d(var(--motion-x), var(--motion-y), 0) scale(1.035);
   transition: transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -58,8 +60,8 @@ body::before {
 body::after {
   z-index: -1;
   background:
-    radial-gradient(circle at 76% 8%, rgba(35, 242, 255, 0.62), transparent 34%),
-    linear-gradient(180deg, rgba(35, 242, 255, 0.82) 0%, rgba(210, 252, 255, 0.9) 34%, rgba(249, 254, 255, 0.94) 72%, rgba(255, 255, 255, 0.96) 100%);
+    radial-gradient(circle at 76% 8%, rgba(35, 242, 255, 0.38), transparent 34%),
+    linear-gradient(180deg, rgba(35, 242, 255, 0.52) 0%, rgba(210, 252, 255, 0.62) 34%, rgba(249, 254, 255, 0.78) 72%, rgba(255, 255, 255, 0.86) 100%);
 }
 
 a {
