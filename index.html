@@ -8,6 +8,8 @@
       name="description"
       content="They Direct creates AI-assisted films, animation, campaign assets, and pitch visuals with human creative direction and production control."
     >
+    <link rel="preconnect" href="https://player.vimeo.com">
+    <link rel="preconnect" href="https://i.vimeocdn.com">
     <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="assets/pics/hero_01.png" as="image">
     <link rel="stylesheet" href="css/styles.css">
@@ -42,7 +44,69 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <h1 id="hero-title">Fast production<br>Finished properly</h1>
+          <h1 id="hero-title">Fast production<br>Finishing properly</h1>
+
+          <div class="hero-showreel">
+            <p class="hero-showreel-label">Showreel</p>
+            <figure class="showreel" aria-label="They Direct showreel">
+              <div class="showreel-stage">
+                <div class="showreel-media">
+                  <div class="showreel-video">
+                    <iframe
+                      src="https://player.vimeo.com/video/849899875?autoplay=1&amp;loop=1&amp;muted=1&amp;playsinline=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;controls=0&amp;autopause=0"
+                      title="They Direct showreel"
+                      allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+                      allowfullscreen
+                      loading="eager"
+                      tabindex="-1"
+                    ></iframe>
+                  </div>
+                </div>
+                <div class="showreel-controls">
+                  <div class="showreel-volume">
+                    <button
+                      type="button"
+                      class="showreel-sound"
+                      aria-expanded="false"
+                      aria-controls="showreel-volume-panel"
+                      aria-haspopup="true"
+                      aria-label="Volume"
+                    >
+                      <span class="showreel-sound-icons" aria-hidden="true">
+                        <svg class="showreel-sound-icon showreel-sound-icon--off is-active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M11 5L6 9H3v6h3l5 4V5z"/>
+                          <path d="M16 9l5 5M21 9l-5 5"/>
+                        </svg>
+                        <svg class="showreel-sound-icon showreel-sound-icon--on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M11 5L6 9H3v6h3l5 4V5z"/>
+                          <path d="M15.5 8.5a4.5 4.5 0 0 1 0 7"/>
+                          <path d="M18 6a7.5 7.5 0 0 1 0 12"/>
+                          <path d="M20.5 3.5a10.5 10.5 0 0 1 0 17"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div id="showreel-volume-panel" class="showreel-volume-panel" role="group" hidden>
+                      <label class="sr-only" for="showreel-volume-slider">Volume</label>
+                      <input
+                        type="range"
+                        id="showreel-volume-slider"
+                        class="showreel-volume-slider"
+                        min="0"
+                        max="100"
+                        value="0"
+                        step="1"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                      >
+                      <output class="showreel-volume-value" for="showreel-volume-slider">0%</output>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </figure>
+          </div>
+
           <p class="hero-lede">
             We help teams turn briefs and rough ideas into films, animation, campaign assets, and
             pitch visuals that are ready to use, not just ready to review.
@@ -51,14 +115,6 @@
             <a class="button button-primary" href="#models">Find your setup</a>
           </div>
         </div>
-      </section>
-
-      <section class="reel-section" aria-label="They Direct showreel section">
-        <figure class="showreel" aria-label="They Direct showreel">
-          <div class="showreel-frame">
-            <span>SHOWREEL</span>
-          </div>
-        </figure>
       </section>
 
       <section class="section audience-section" id="audience" aria-labelledby="audience-title">
