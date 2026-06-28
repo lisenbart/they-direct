@@ -117,19 +117,33 @@
         </div>
       </section>
 
-      <section class="section audience-section" id="audience" aria-labelledby="audience-title">
-        <div class="section-header">
-          <div>
-            <p class="section-kicker">Who we help</p>
-            <h2 id="audience-title">Built for teams that need moving-image production</h2>
-          </div>
-          <p>
-            We plug into teams that need films, animation, campaign assets, pitch visuals, or ongoing
-            production support.
-          </p>
-        </div>
+      <section class="section audience-section section--collapsible" id="audience" aria-labelledby="audience-title">
+        <button
+          type="button"
+          class="section-header section-toggle"
+          data-section-toggle
+          aria-expanded="false"
+          aria-controls="audience-panel"
+        >
+          <span class="section-toggle__bar">
+            <span class="section-toggle__label">Who we help</span>
+            <span class="section-toggle__chevron" aria-hidden="true"></span>
+          </span>
+          <span class="section-toggle__content">
+            <span class="section-toggle__titles">
+              <p class="section-kicker">Who we help</p>
+              <h2 id="audience-title">Built for teams that need moving-image production</h2>
+            </span>
+            <p class="section-toggle__lede">
+              We plug into teams that need films, animation, campaign assets, pitch visuals, or ongoing
+              production support.
+            </p>
+          </span>
+        </button>
 
-        <div class="audience-grid">
+        <div class="section-panel" id="audience-panel" data-section-panel>
+          <div class="section-panel__inner">
+            <div class="audience-grid">
           <article class="audience-item list-item icon-direction">
             <span class="item-icon" aria-hidden="true"></span>
             <div>
@@ -165,22 +179,37 @@
               <p>Proof-of-concept films, investor visuals, pitch materials.</p>
             </div>
           </article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section models-section" id="models" aria-labelledby="models-title">
-        <div class="section-header">
-          <div>
-            <p class="section-kicker">How we work</p>
-            <h2 id="models-title">Choose how we work with you</h2>
-          </div>
-          <p>
-            Pick the working format that matches your situation. We can start with one task or become
-            regular production support for your team.
-          </p>
-        </div>
+      <section class="section models-section section--collapsible" id="models" aria-labelledby="models-title">
+        <button
+          type="button"
+          class="section-header section-toggle"
+          data-section-toggle
+          aria-expanded="false"
+        >
+          <span class="section-toggle__bar">
+            <span class="section-toggle__label">How we work</span>
+            <span class="section-toggle__chevron" aria-hidden="true"></span>
+          </span>
+          <span class="section-toggle__content">
+            <span class="section-toggle__titles">
+              <p class="section-kicker">How we work</p>
+              <h2 id="models-title">Choose how we work with you</h2>
+            </span>
+            <p class="section-toggle__lede">
+              Pick the working format that matches your situation. We can start with one task or become
+              regular production support for your team.
+            </p>
+          </span>
+        </button>
 
-        <div class="model-grid">
+        <div class="section-panel" id="models-panel" data-section-panel>
+          <div class="section-panel__inner">
+            <div class="model-grid">
           <article class="model-card list-item icon-film">
             <span class="item-icon" aria-hidden="true"></span>
             <div>
@@ -216,22 +245,37 @@
               <p>AI-fluent production behind the scenes for agencies.</p>
             </div>
           </article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section about-section" id="about" aria-labelledby="about-title">
-        <div class="section-header">
-          <div>
-            <p class="section-kicker">About</p>
-            <h2 id="about-title">The tool is AI<br>The direction is human</h2>
-          </div>
-          <p>
-            We use AI as one more production tool, not as the creative answer. The work is shaped by
-            people who know what to make, what to reject, what to refine, and when the result is ready.
-          </p>
-        </div>
+      <section class="section about-section section--collapsible" id="about" aria-labelledby="about-title">
+        <button
+          type="button"
+          class="section-header section-toggle"
+          data-section-toggle
+          aria-expanded="false"
+        >
+          <span class="section-toggle__bar">
+            <span class="section-toggle__label">About</span>
+            <span class="section-toggle__chevron" aria-hidden="true"></span>
+          </span>
+          <span class="section-toggle__content">
+            <span class="section-toggle__titles">
+              <p class="section-kicker">About</p>
+              <h2 id="about-title">The tool is AI<br>The direction is human</h2>
+            </span>
+            <p class="section-toggle__lede">
+              We use AI as one more production tool, not as the creative answer. The work is shaped by
+              people who know what to make, what to reject, what to refine, and when the result is ready.
+            </p>
+          </span>
+        </button>
 
-        <div class="about-grid">
+        <div class="section-panel" id="about-panel" data-section-panel>
+          <div class="section-panel__inner">
+            <div class="about-grid">
           <article class="list-item icon-concept">
             <span class="item-icon" aria-hidden="true"></span>
             <div>
@@ -253,22 +297,37 @@
               <p>We edit, animate, polish, version, and deliver assets that are ready for real channels.</p>
             </div>
           </article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section services-section" id="services" aria-labelledby="services-title">
-        <div class="section-header">
-          <div>
-            <p class="section-kicker">Services</p>
-            <h2 id="services-title">What we can make</h2>
-          </div>
-          <p>
-            Films, animation, campaign assets, pitch visuals, and social content, shaped for the way
-            we work together.
-          </p>
-        </div>
+      <section class="section services-section section--collapsible" id="services" aria-labelledby="services-title">
+        <button
+          type="button"
+          class="section-header section-toggle"
+          data-section-toggle
+          aria-expanded="false"
+        >
+          <span class="section-toggle__bar">
+            <span class="section-toggle__label">Services</span>
+            <span class="section-toggle__chevron" aria-hidden="true"></span>
+          </span>
+          <span class="section-toggle__content">
+            <span class="section-toggle__titles">
+              <p class="section-kicker">Services</p>
+              <h2 id="services-title">What we can make</h2>
+            </span>
+            <p class="section-toggle__lede">
+              Films, animation, campaign assets, pitch visuals, and social content, shaped for the way
+              we work together.
+            </p>
+          </span>
+        </button>
 
-        <div class="format-grid">
+        <div class="section-panel" id="services-panel" data-section-panel>
+          <div class="section-panel__inner">
+            <div class="format-grid">
           <article class="format-card list-item icon-film">
             <span class="item-icon" aria-hidden="true"></span>
             <div>
@@ -297,21 +356,36 @@
               <p>Concept films, mood films, investor pieces, and internal approval tools.</p>
             </div>
           </article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section process-section" id="process" aria-labelledby="process-title">
-        <div class="section-header">
-          <div>
-            <p class="section-kicker">Process</p>
-            <h2 id="process-title">Fast to start<br>Controlled to finish</h2>
-          </div>
-          <p>
-            A simple path from rough brief to finished assets, with human direction at every step.
-          </p>
-        </div>
+      <section class="section process-section section--collapsible" id="process" aria-labelledby="process-title">
+        <button
+          type="button"
+          class="section-header section-toggle"
+          data-section-toggle
+          aria-expanded="false"
+        >
+          <span class="section-toggle__bar">
+            <span class="section-toggle__label">Process</span>
+            <span class="section-toggle__chevron" aria-hidden="true"></span>
+          </span>
+          <span class="section-toggle__content">
+            <span class="section-toggle__titles">
+              <p class="section-kicker">Process</p>
+              <h2 id="process-title">Fast to start<br>Controlled to finish</h2>
+            </span>
+            <p class="section-toggle__lede">
+              A simple path from rough brief to finished assets, with human direction at every step.
+            </p>
+          </span>
+        </button>
 
-        <div class="process-track">
+        <div class="section-panel" id="process-panel" data-section-panel>
+          <div class="section-panel__inner">
+            <div class="process-track">
           <article class="list-item icon-brief">
             <span class="item-icon" aria-hidden="true"></span>
             <div>
@@ -340,22 +414,37 @@
               <p>We deliver finished files and versions for the channels you actually need.</p>
             </div>
           </article>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section trust-section" aria-labelledby="trust-title">
-        <div class="section-header">
-          <div>
-            <p class="section-kicker">Trust</p>
-            <h2 id="trust-title">Human control, not raw AI output</h2>
-          </div>
-          <p>
-            AI can generate options. It cannot decide what is right for your brand, your audience,
-            your deadline, or your campaign. That is where human direction matters.
-          </p>
-        </div>
+      <section class="section trust-section section--collapsible" aria-labelledby="trust-title">
+        <button
+          type="button"
+          class="section-header section-toggle"
+          data-section-toggle
+          aria-expanded="false"
+        >
+          <span class="section-toggle__bar">
+            <span class="section-toggle__label">Trust</span>
+            <span class="section-toggle__chevron" aria-hidden="true"></span>
+          </span>
+          <span class="section-toggle__content">
+            <span class="section-toggle__titles">
+              <p class="section-kicker">Trust</p>
+              <h2 id="trust-title">Human control, not raw AI output</h2>
+            </span>
+            <p class="section-toggle__lede">
+              AI can generate options. It cannot decide what is right for your brand, your audience,
+              your deadline, or your campaign. That is where human direction matters.
+            </p>
+          </span>
+        </button>
 
-        <div class="trust-grid">
+        <div class="section-panel" id="trust-panel" data-section-panel>
+          <div class="section-panel__inner">
+            <div class="trust-grid">
           <article class="list-item icon-direction">
             <span class="item-icon" aria-hidden="true"></span>
             <div>
@@ -377,6 +466,8 @@
               <p>Campaigns, launches, pitches, social assets, internal approvals, and presentation decks.</p>
             </div>
           </article>
+            </div>
+          </div>
         </div>
       </section>
 

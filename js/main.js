@@ -92,6 +92,51 @@ if (!reduceMotion.matches) {
 
 initShowreelVideoFit();
 initShowreelVimeo();
+initSectionCollapsibles();
+
+const mobileSectionsMq = window.matchMedia("(max-width: 740px)");
+
+function initSectionCollapsibles() {
+  const sections = document.querySelectorAll(".section--collapsible");
+  if (!sections.length) return;
+
+  sections.forEach((section) => {
+    const toggle = section.querySelector("[data-section-toggle]");
+    if (!toggle) return;
+
+    toggle.addEventListener("click", () => {
+      if (!mobileSectionsMq.matches) return;
+
+      const expanded = section.classList.toggle("is-expanded");
+      toggle.setAttribute("aria-expanded", String(expanded));
+
+      if (expanded) {
+        section.querySelectorAll(".animate-in").forEach((element) => {
+          element.classList.add("is-visible");
+        });
+      }
+    });
+  });
+
+  function syncSectionLayout() {
+    sections.forEach((section) => {
+      const toggle = section.querySelector("[data-section-toggle]");
+      if (!toggle) return;
+
+      if (!mobileSectionsMq.matches) {
+        section.classList.add("is-expanded");
+        toggle.setAttribute("aria-expanded", "true");
+        return;
+      }
+
+      const expanded = section.classList.contains("is-expanded");
+      toggle.setAttribute("aria-expanded", String(expanded));
+    });
+  }
+
+  syncSectionLayout();
+  mobileSectionsMq.addEventListener("change", syncSectionLayout);
+}
 
 function initShowreelVideoFit() {
   const stage = document.querySelector(".showreel-stage");
