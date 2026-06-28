@@ -1049,7 +1049,7 @@ h2 {
   }
 
   body {
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: calc(68px + env(safe-area-inset-bottom));
   }
 
   body::before {
@@ -1095,26 +1095,22 @@ h2 {
   }
 
   .hero {
-    padding-top: calc(34px + 52px);
+    padding-top: 34px;
   }
 
   .sticky-cta {
-    top: var(--header);
-    right: var(--page-x);
-    left: var(--page-x);
-    bottom: auto;
+    inset: auto 18px calc(12px + env(safe-area-inset-bottom));
     width: auto;
     min-width: 0;
-    min-height: 40px;
+    min-height: 52px;
     border: 1px solid rgba(35, 242, 255, 0.34);
     border-radius: var(--radius);
-    font-size: 0.74rem;
     transform: none;
   }
 
   .sticky-cta:hover,
   .sticky-cta:focus-visible {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
   }
 
   h1 {
