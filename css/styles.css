@@ -922,6 +922,13 @@ h2 {
     padding-bottom: calc(68px + env(safe-area-inset-bottom));
   }
 
+  body::before {
+    background:
+      linear-gradient(180deg, rgba(190, 249, 255, 0.22) 0%, rgba(244, 251, 253, 0.14) 42%, rgba(255, 255, 255, 0.12) 100%),
+      url("../assets/pics/hero_01.png") 72% center / cover no-repeat;
+    transform: translate3d(var(--motion-x), var(--motion-y), 0) scale(1.02);
+  }
+
   .brand {
     gap: 9px;
   }
@@ -1004,6 +1011,14 @@ h2 {
   .contact-form .field-wide,
   .contact-form .button {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body::before {
+    background:
+      linear-gradient(180deg, rgba(190, 249, 255, 0.22) 0%, rgba(244, 251, 253, 0.14) 42%, rgba(255, 255, 255, 0.12) 100%),
+      url("../assets/pics/hero_01.png") 78% center / cover no-repeat;
   }
 }
 
