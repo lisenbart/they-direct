@@ -1049,7 +1049,7 @@ h2 {
   }
 
   body {
-    padding-bottom: calc(68px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   body::before {
@@ -1065,16 +1065,27 @@ h2 {
 
   .site-header .brand {
     max-width: calc(100vw - 82px);
+    align-items: center;
   }
 
   .brand-logo-wrap {
-    width: 142px;
-    height: 32px;
-    flex-basis: 142px;
+    width: 118px;
+    height: 28px;
+    flex: 0 0 118px;
   }
 
   .brand-tagline {
-    display: none;
+    display: inline-flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none;
+    font-size: clamp(0.58rem, 2.6vw, 0.68rem);
+    line-height: 1.12;
+    white-space: normal;
+  }
+
+  .brand-tagline::before {
+    height: 18px;
   }
 
   .brand-mark {
@@ -1084,22 +1095,26 @@ h2 {
   }
 
   .hero {
-    padding-top: 34px;
+    padding-top: calc(34px + 52px);
   }
 
   .sticky-cta {
-    inset: auto 18px calc(12px + env(safe-area-inset-bottom));
+    top: var(--header);
+    right: var(--page-x);
+    left: var(--page-x);
+    bottom: auto;
     width: auto;
     min-width: 0;
-    min-height: 52px;
+    min-height: 40px;
     border: 1px solid rgba(35, 242, 255, 0.34);
     border-radius: var(--radius);
+    font-size: 0.74rem;
     transform: none;
   }
 
   .sticky-cta:hover,
   .sticky-cta:focus-visible {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 
   h1 {
