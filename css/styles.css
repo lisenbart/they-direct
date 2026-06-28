@@ -1237,6 +1237,9 @@ h2 {
   .section--collapsible .section-toggle {
     display: block;
     cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(35, 242, 255, 0.18);
   }
 
   .section--collapsible .section-toggle.section-header {

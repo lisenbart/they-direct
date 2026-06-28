@@ -24,7 +24,7 @@ if (menuButton && nav) {
 }
 
 const animatedElements = document.querySelectorAll(
-  ".section-header, .audience-grid, .model-grid, .about-grid, .format-grid, .process-track, .trust-grid, .contact-form, .site-footer"
+  ".section-header:not(.section-toggle), .audience-grid, .model-grid, .about-grid, .format-grid, .process-track, .trust-grid, .contact-form, .site-footer"
 );
 
 if (animatedElements.length) {
@@ -90,11 +90,11 @@ if (!reduceMotion.matches) {
   );
 }
 
+const mobileSectionsMq = window.matchMedia("(max-width: 740px)");
+
 initShowreelVideoFit();
 initShowreelVimeo();
 initSectionCollapsibles();
-
-const mobileSectionsMq = window.matchMedia("(max-width: 740px)");
 
 function initSectionCollapsibles() {
   const sections = document.querySelectorAll(".section--collapsible");
@@ -104,9 +104,10 @@ function initSectionCollapsibles() {
     const toggle = section.querySelector("[data-section-toggle]");
     if (!toggle) return;
 
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", (event) => {
       if (!mobileSectionsMq.matches) return;
 
+      event.preventDefault();
       const expanded = section.classList.toggle("is-expanded");
       toggle.setAttribute("aria-expanded", String(expanded));
 
@@ -136,6 +137,27 @@ function initSectionCollapsibles() {
 
   syncSectionLayout();
   mobileSectionsMq.addEventListener("change", syncSectionLayout);
+
+  document.querySelectorAll('.site-nav a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!mobileSectionsMq.matches) return;
+
+      const targetId = link.getAttribute("href")?.slice(1);
+      if (!targetId) return;
+
+      const targetSection = document.getElementById(targetId);
+      if (!(targetSection instanceof HTMLElement) || !targetSection.classList.contains("section--collapsible")) {
+        return;
+      }
+
+      targetSection.classList.add("is-expanded");
+      const toggle = targetSection.querySelector("[data-section-toggle]");
+      toggle?.setAttribute("aria-expanded", "true");
+      targetSection.querySelectorAll(".animate-in").forEach((element) => {
+        element.classList.add("is-visible");
+      });
+    });
+  });
 }
 
 function initShowreelVideoFit() {
