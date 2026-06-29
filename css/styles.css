@@ -54,7 +54,7 @@ body::after {
 body::before {
   background:
     linear-gradient(180deg, rgba(190, 249, 255, 0.22) 0%, rgba(244, 251, 253, 0.14) 42%, rgba(255, 255, 255, 0.12) 100%),
-    url("../assets/pics/hero_01.png") center center / cover no-repeat;
+    url("../assets/pics/liquid-neon-glass-bg.png") center center / cover no-repeat;
   transform: translate3d(var(--motion-x), var(--motion-y), 0) scale(1.035);
   transition: transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -1201,7 +1201,7 @@ h2 {
   body::before {
     background:
       linear-gradient(180deg, rgba(190, 249, 255, 0.22) 0%, rgba(244, 251, 253, 0.14) 42%, rgba(255, 255, 255, 0.12) 100%),
-      url("../assets/pics/hero_01.png") 72% center / cover no-repeat;
+      url("../assets/pics/liquid-neon-glass-bg.png") 72% center / cover no-repeat;
     transform: translate3d(var(--motion-x), var(--motion-y), 0) scale(1.02);
   }
 
@@ -1326,7 +1326,7 @@ h2 {
   body::before {
     background:
       linear-gradient(180deg, rgba(190, 249, 255, 0.22) 0%, rgba(244, 251, 253, 0.14) 42%, rgba(255, 255, 255, 0.12) 100%),
-      url("../assets/pics/hero_01.png") 78% center / cover no-repeat;
+      url("../assets/pics/liquid-neon-glass-bg.png") 78% center / cover no-repeat;
   }
 }
 
@@ -1400,13 +1400,9 @@ body::after {
 
 body::before {
   background:
-    radial-gradient(ellipse at 68% 18%, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.12) 11%, transparent 32%),
-    radial-gradient(ellipse at 78% 32%, rgba(35, 242, 255, 0.42) 0%, rgba(35, 242, 255, 0.12) 22%, transparent 48%),
-    radial-gradient(ellipse at 38% 18%, rgba(255, 92, 48, 0.32) 0%, rgba(255, 92, 48, 0.12) 20%, transparent 46%),
-    conic-gradient(from 225deg at 64% 34%, transparent 0deg, rgba(255, 255, 255, 0.16) 34deg, rgba(35, 242, 255, 0.12) 72deg, transparent 130deg, rgba(255, 92, 48, 0.16) 212deg, transparent 286deg),
-    linear-gradient(90deg, rgba(7, 9, 10, 0.96) 0%, rgba(7, 9, 10, 0.76) 44%, rgba(7, 9, 10, 0.46) 100%),
-    linear-gradient(180deg, rgba(7, 9, 10, 0.08) 0%, rgba(7, 9, 10, 0.94) 100%),
-    url("../assets/pics/hero_01.png") center center / cover no-repeat;
+    linear-gradient(90deg, rgba(7, 9, 10, 0.96) 0%, rgba(7, 9, 10, 0.78) 38%, rgba(7, 9, 10, 0.34) 100%),
+    linear-gradient(180deg, rgba(7, 9, 10, 0.04) 0%, rgba(7, 9, 10, 0.92) 100%),
+    url("../assets/pics/liquid-neon-glass-bg.png") center center / cover no-repeat;
   opacity: 1;
 }
 
@@ -1854,7 +1850,7 @@ h2 {
       radial-gradient(ellipse at 22% 14%, rgba(255, 92, 48, 0.22), transparent 42%),
       linear-gradient(90deg, rgba(7, 9, 10, 0.95) 0%, rgba(7, 9, 10, 0.8) 100%),
       linear-gradient(180deg, rgba(7, 9, 10, 0.2) 0%, rgba(7, 9, 10, 0.96) 100%),
-      url("../assets/pics/hero_01.png") 72% center / cover no-repeat;
+      url("../assets/pics/liquid-neon-glass-bg.png") 72% center / cover no-repeat;
   }
 
   h1 {
@@ -1888,6 +1884,6 @@ h2 {
       radial-gradient(ellipse at 18% 12%, rgba(255, 92, 48, 0.2), transparent 38%),
       linear-gradient(90deg, rgba(7, 9, 10, 0.96) 0%, rgba(7, 9, 10, 0.84) 100%),
       linear-gradient(180deg, rgba(7, 9, 10, 0.2) 0%, rgba(7, 9, 10, 0.96) 100%),
-      url("../assets/pics/hero_01.png") 78% center / cover no-repeat;
+      url("../assets/pics/liquid-neon-glass-bg.png") 78% center / cover no-repeat;
   }
 }
